@@ -4,6 +4,7 @@ import com.example.demo.model.Post;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Collections;
@@ -18,6 +19,7 @@ public class RestService {
 
     // GET Request
     public String getPostsPlainJSON(){
+        System.out.println("go");
         String url = "https://jsonplaceholder.typicode.com/posts";
         return this.restTemplate.getForObject(url, String.class);
     }
