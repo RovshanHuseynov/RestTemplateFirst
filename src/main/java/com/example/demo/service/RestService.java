@@ -67,5 +67,11 @@ public class RestService {
         }
     }
 
-
+    // request url
+    public String getRequest(){
+        String url = "https://google.com/search?q={q}";
+        RestTemplate restTemplate = new RestTemplate();
+        String html = restTemplate.getForObject(url, String.class, "java");
+        return html;
+    }
 }

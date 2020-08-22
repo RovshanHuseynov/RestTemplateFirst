@@ -15,7 +15,7 @@ public class Controller {
     }
 
     @RequestMapping("/get")
-    public Post test(){
-        return restService.getPostWithUrlParameters();
+    public String test(){
+        return restService.getRequest();
     }
 }
